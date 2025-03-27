@@ -4,3 +4,4 @@ begin:
 	
 loop:
 	SLT $t2, $a0, $t1
+	s
