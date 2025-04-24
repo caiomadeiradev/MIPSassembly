@@ -12,6 +12,7 @@ int sqrt_nr(int x, int i) {
     return (sqrt_nr(x, i-1)+(x/sqrt_nr(x,i-1)))/2;
 }
 
+// Função auxiliar apenas pra fins de validação do resultado usando a math.h de C
 int valide_result(int x, int r) {
     if (sqrt(x) == r)
         return 1;
@@ -20,7 +21,7 @@ int valide_result(int x, int r) {
 
 int main(void)
 {
-    // caso bom
+    // Caso bom
     int x = 100;
     int i = 5;
 
@@ -30,7 +31,7 @@ int main(void)
 
     int r = sqrt_nr(x, i);
 
-    // o resultado deve ser 10, pois raiz_quadrada de 100 = 10
+    // O resultado deve ser 10, pois raiz_quadrada de 100 = 10
     printf("sqrt_nr(%d, %d) = %d\n", x, i, r);
     if (valide_result(x, r) == 1) 
         printf("resultado convergiu adequadamente.\n");
